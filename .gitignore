@@ -1,0 +1,43 @@
+# 忽略 CMake 构建的中间文件和文件夹
+build/
+cmake-build-debug/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+*.cmake
+
+# 忽略日志文件
+*.log
+
+# 忽略临时文件
+*.tmp
+*.bak
+
+# 忽略 Ninja 构建文件
+*.ninja
+rules.ninja
+
+# 忽略自动生成的文件
+new_final_autogen/
+*_autogen/
+*.o
+*.o.d
+
+# 忽略 IDE 相关文件（如 CLion）
+.idea/
+.vscode/
+*.iml
+
+# 忽略系统文件
+.DS_Store
+Thumbs.db
+
+# 忽略测试输出
+Testing/
+Temporary/
+
+# 忽略其他不需要的临时文件
+*.swp
+*.swo
