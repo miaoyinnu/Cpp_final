@@ -27,7 +27,7 @@ double Car::calculateParkingFee() const
     int totalHours = getEntryTime().secsTo(now) / 3600;  // 转换为小时
     
     // 24小时内按每小时20MOP计算，超过24小时封顶400MOP
-    if (totalHours <= 24) {
+    if (totalHours < 20) {
         return totalHours * 20.0;
     } else {
         return 400.0;  // 封顶价格

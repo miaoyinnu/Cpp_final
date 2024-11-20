@@ -8,6 +8,7 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QFileDialog>
+#include <QRegularExpression>
 #include <opencv2/opencv.hpp>
 #include "parkingmanager.h"
 
@@ -45,15 +46,16 @@ private:
     void updateCarTable();
     void clearTableSelection();
     QString recognizePlate(const cv::Mat& image);
+    bool isValidPlateNumber(const QString& number);
+    char recognizeCharacter(const cv::Mat& charImg);
 
     Ui::MainWindow *ui;
     QTableWidget *carTable;
     ParkingManager &parkingManager;
     bool isAdmin;
     
-    // 分页相关成员
     int currentPage = 0;
-    static const int itemsPerPage = 10;  // 使用 static const
+    static const int itemsPerPage = 10;
     QPushButton* prevPageBtn;
     QPushButton* nextPageBtn;
     QLabel* pageInfoLabel;

@@ -57,7 +57,7 @@ bool LoginWindow::validateCredentials(const QString& username, const QString& pa
         m_isAdmin = true;
         return true;
     }
-    else if (username == "u" && hashedInputPass == USER_PASS_HASH) {
+    else if (username == "user" && hashedInputPass == USER_PASS_HASH) {
         m_isAdmin = false;
         return true;
     }
